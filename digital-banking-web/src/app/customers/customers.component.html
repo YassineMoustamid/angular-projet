@@ -3,7 +3,7 @@
    <div class="card-header">Customers</div>
    <div  >
      <div *ngIf="searchFormGroup">
-       {{this.searchFormGroup.value| json }}
+
        <form [formGroup]="searchFormGroup" (ngSubmit)="handleSearchCustomers()">
          <div class="input-group">
            <label class="input-group-text"> Keyword:</label>
@@ -32,6 +32,11 @@
          <td>
            <button (click)="handleDeleteCustomers(c)" class="btn btn-danger">
              <i class="bi bi-trash"></i>
+           </button>
+         </td>
+         <td>
+           <button (click)="handleCustomersAccounts(c)" class="btn btn-success">
+             Accounts
            </button>
          </td>
 
